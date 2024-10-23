@@ -1,7 +1,14 @@
 <resources>
     <string name="app_name">WordCounter_AV_2PD</string>
+    <string name="edittexthint">Write here</string>
+    <string name="buttontext">Count</string>
+    <string name="textviewtext">YOU WRITE, WE COUNT</string>
+
     <string-array name="countingoptions">
         <item>Words</item>
         <item>Characters</item>
     </string-array>
+    <string name="toastemptyinput">Please enter a text!</string>
+    <string name="words_option">Words</string>
+    <string name="characters_option">Characters</string>
 </resources>
