@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WordCounter_AV_2PD</string>
+    <string-array name="countingoptions">
+        <item>Words</item>
+        <item>Characters</item>
+    </string-array>
+</resources>
