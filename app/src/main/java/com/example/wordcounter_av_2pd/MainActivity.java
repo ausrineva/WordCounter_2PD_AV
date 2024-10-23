@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Button fpbutton;
     EditText fptxtinput;
     Spinner fpspinner;
+    Button dltbutton;
 
 
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         fpbutton = findViewById(R.id.fpbutton);
         fptxtinput = findViewById(R.id.fptxtinput);
         fpspinner = findViewById(R.id.fpspinner);
+        dltbutton = findViewById(R.id.dltbutton);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         fpbutton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            dltbutton.setVisibility(View.VISIBLE);
             // Kodas skirtas gauti įvestą tekstą iš fptxtinput
             String inputText = fptxtinput.getText().toString();
 
@@ -67,7 +70,15 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     });
-
+        // „Delete Text“ mygtuko onClick įvykis, skirtas išvalyti EditText
+        dltbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fptxtinput.setText("");  // Ištrinamas visas tekstas iš EditText
+                fptxt.setText("");       // Ištrinamas rezultatas iš TextView, jei norima išvalyti ir šį lauką
+                dltbutton.setVisibility(View.GONE);  // Paslėpiamas delete mygtukas po išvalymo
+            }
+        });
 
     }
 }

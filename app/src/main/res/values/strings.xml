@@ -3,6 +3,7 @@
     <string name="edittexthint">Write here</string>
     <string name="buttontext">Count</string>
     <string name="textviewtext">YOU WRITE, WE COUNT</string>
+    <string name="dltbutton">Delete text</string>
 
     <string-array name="countingoptions">
         <item>Words</item>
